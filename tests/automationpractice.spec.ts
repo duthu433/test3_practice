@@ -73,4 +73,7 @@ await page.locator("#submit_search").nth(0).click()
 expect(await page.locator("//h2[text()='Searched Products']")).toBeVisible({timeout:5000})
 })
 
+test('print',async({page})=>{
+console.log("Hi")
+})
 
