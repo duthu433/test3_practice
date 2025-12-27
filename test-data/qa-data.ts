@@ -2,7 +2,7 @@
 
 export const testData = {
     url:'https://automationexercise.com/',
-  name: 'Dhuthu55',
+  name: 'Dhuthu5',
   password: 'duthu',
 
   dob: {

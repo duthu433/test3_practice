@@ -9,14 +9,14 @@ test.beforeEach(async ({ page }) => {
   await page.goto(testData.url);
 });
 
-test.skip('Test Case 1: Register User', async ({homepage,newusersignup,enteracctinfo}) => {
+test('Test Case 1: Register User', async ({homepage,newusersignup,enteracctinfo}) => {
   await homepage.homePageFunctionality();
   await newusersignup.newUserSignUpFunctionality(testData.name);
   await enteracctinfo.enteractinfofunctionality(testData.name,testData.password,testData.dob.day,testData.dob.month,testData.dob.year);
   await enteracctinfo.enteradressfuntionality(testData.name,testData.firstName,testData.lastName,testData.companyName,testData.address,testData.country,testData.state,testData.city,testData.zipCode,testData.mobileNumber);
 })
 
-test.skip('Test Case 2: Login User with correct email and password', async ({homepage,logintoaccount,enteracctinfo }) => {
+test('Test Case 2: Login User with correct email and password', async ({homepage,logintoaccount,enteracctinfo }) => {
   await homepage.homePageFunctionality()
   await logintoaccount.loginToUrAccountFuctionality(testData.name)
   expect((await enteracctinfo.getloggedinastxt(testData.name).innerText()).trim()).toEqual(`Logged in as ${testData.name}`)
